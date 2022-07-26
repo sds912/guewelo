@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
-import { createStore  } from "redux";
+import { createStore , configureStore } from "redux";
 import { Provider } from "react-redux";
 import firebase from "firebase/compat/app";
 import { rootReducer } from "./reducers";
@@ -37,7 +37,7 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig)
-//firebase.firestore()
+firebase.firestore()
 const initialState = {};
 
 
@@ -55,8 +55,8 @@ root.render(
   <React.StrictMode>
   <Provider store={store}>
     <ReactReduxFirebaseProvider {...rrfProps} > 
-    <NavBar />
     <Router>
+    <NavBar />
       <Routes>
         <Route  path='/' element={ <App />} />
         <Route path='/post/:slug' element={<PostDetails />} />

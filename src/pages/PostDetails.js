@@ -1,8 +1,5 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Button, Col, Container, Row } from 'react-bootstrap'
-import { Carousel } from 'react-carousel-minimal'
-import {faWhatsapp} from '@fortawesome/free-solid-svg-icons'
-import ReactWhatsapp from 'react-whatsapp'
+import { Col, Container, Row } from 'react-bootstrap';
+import { Carousel } from 'react-carousel-minimal';
 
 
 const PostDetails = (props) => {
@@ -131,9 +128,7 @@ const PostDetails = (props) => {
             </p>
         </div>
         <div className='mt-3'>
-            <ReactWhatsapp number="+221777443663" message="Salut je viens de voir cette annonce" className='btn btn-block btn-success' >
-                whatsapp
-            </ReactWhatsapp>
+           
         </div>
       </div>
     </Container>
